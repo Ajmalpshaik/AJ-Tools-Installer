@@ -28,11 +28,9 @@ powershell -ExecutionPolicy Bypass -File .\tools\prepare-release.ps1 -SourceRepo
 git add releases
 git commit -m "release: vX.Y.Z"
 git tag vX.Y.Z
-git push origin master --tags
+git push origin main --tags
 ```
 
-3. Open GitHub -> Releases -> Draft new release -> select tag `vX.Y.Z`.
-4. Upload:
+3. GitHub Actions workflow automatically creates/updates the Release when tag `vX.Y.Z` is pushed and uploads:
 - `releases/AJ-Tools-vX.Y.Z.zip`
 - `releases/SHA256SUMS.txt`
-5. Publish release.

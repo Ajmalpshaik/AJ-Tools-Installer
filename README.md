@@ -40,3 +40,5 @@ powershell -ExecutionPolicy Bypass -File .\tools\prepare-release.ps1 -SourceRepo
 ```
 
 Then follow the printed push + release steps.
+
+Release publishing is automated in this repo: pushing tag `vX.Y.Z` creates/updates the GitHub Release and uploads assets.
