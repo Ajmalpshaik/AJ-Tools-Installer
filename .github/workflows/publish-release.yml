@@ -15,6 +15,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Extract release notes
+        id: changelog
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME#v}"
+          notes_file="$RUNNER_TEMP/release-notes.md"
+          awk -v version="$version" '
+            $0 ~ "^## \\[" version "\\] - " {
+              capture=1
+              split($0, parts, " - ")
+              print "Released: " parts[2]
+              print ""
+              next
+            }
+            capture && /^## \[/ { exit }
+            capture { print }
+          ' CHANGELOG.md > "$notes_file"
+          test -s "$notes_file"
+          echo "notes_file=$notes_file" >> "$GITHUB_OUTPUT"
+
       - name: Validate release payload
         shell: bash
         run: |
@@ -32,6 +53,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: AJ Tools ${{ github.ref_name }}
+          body_path: ${{ steps.changelog.outputs.notes_file }}
           files: |
             releases/AJ-Tools-${{ github.ref_name }}.zip
             releases/SHA256SUMS.txt

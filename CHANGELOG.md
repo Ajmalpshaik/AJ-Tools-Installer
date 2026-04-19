@@ -1,6 +1,8 @@
 # Changelog
 
 This changelog tracks public installer-repository releases.
+Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
+Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
 ## [1.3.4] - 2026-04-19
 
@@ -9,8 +11,7 @@ This changelog tracks public installer-repository releases.
 
 ## [1.2.2] - 2026-04-19
 
-- Updated installer repository release automation.
-- Aligned the repository workflow with the `main` branch publishing flow.
+- Repository maintenance release to align installer automation with the `main` branch publishing flow.
 
 ## [1.2.1] - 2026-04-15
 

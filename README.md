@@ -2,25 +2,25 @@
 
 AJ-Tools-Installer is the public download and release repository for AJ Tools for Autodesk Revit 2020.
 
-This repository intentionally stays small. It contains the installer package, checksum file, release workflow, and user-facing install/support documentation. It does not contain source code.
+It exists to publish installer packages, checksums, release automation, and end-user install support. It does not contain source code; development happens in [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools).
 
-## What This Repository Contains
+## Repository Role
 
 - GitHub Releases for installer downloads
-- `releases\AJ-Tools-vX.Y.Z.zip`
-- `releases\SHA256SUMS.txt`
-- release automation and install documentation
+- `releases/AJ-Tools-vX.Y.Z.zip`
+- `releases/SHA256SUMS.txt`
+- install, uninstall, and checksum guidance
+- release automation for tagged installer publishes
 
 ## Requirements
 
 - Autodesk Revit 2020
 - Windows x64
-- Administrator rights only for all-users installation
+- Administrator rights are required only for all-users installation
 
 ## Download and Install
 
-1. Open the Releases page:
-   - https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases
+1. Open the [Releases page](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases).
 2. Download `AJ-Tools-vX.Y.Z.zip`.
 3. Extract the archive.
 4. Run `install.cmd` for current-user installation.
@@ -35,16 +35,22 @@ Use PowerShell to verify the downloaded package:
 Get-FileHash -Algorithm SHA256 .\AJ-Tools-vX.Y.Z.zip
 ```
 
-Compare the output with the entry in `SHA256SUMS.txt`.
+Compare the output with the matching entry in `SHA256SUMS.txt`.
+
+## Related Repository
+
+- Source code and development work: [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools)
 
 ## Repository Docs
 
 - [INSTALL.md](INSTALL.md)
-- [CHANGELOG.md](CHANGELOG.md)
 - [RELEASE_PROCESS.md](RELEASE_PROCESS.md)
+- [SUPPORT.md](SUPPORT.md)
+- [CHANGELOG.md](CHANGELOG.md)
 - [SECURITY.md](SECURITY.md)
 
 ## Support
 
-- Installation and download issues: open an issue in this repository
-- Source development is maintained separately in the `AJ Tools` repository and is not distributed here
+- Use this repository for downloads, checksums, installation, uninstall, and release-package issues
+- Use [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools/issues) for feature requests and source-code defects
+- Support routing and reporting rules: [SUPPORT.md](SUPPORT.md)

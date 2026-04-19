@@ -3,3 +3,9 @@ contact_links:
   - name: Read the installation guide first
     url: https://github.com/Ajmalpshaik/AJ-Tools-Installer/blob/main/INSTALL.md
     about: Review install, uninstall, and checksum steps before opening an issue.
+  - name: Source-code bug or feature request
+    url: https://github.com/Ajmalpshaik/AJ-Tools/issues
+    about: Use the source repository for code changes, feature requests, and non-installer defects.
+  - name: Security reporting policy
+    url: https://github.com/Ajmalpshaik/AJ-Tools-Installer/security/policy
+    about: Follow the private reporting instructions for suspicious packages or security concerns.
