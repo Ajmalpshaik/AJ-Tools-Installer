@@ -15,12 +15,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate expected assets
+      - name: Validate release payload
         shell: bash
         run: |
           set -euo pipefail
-          test -f "releases/AJ-Tools-${GITHUB_REF_NAME}.zip"
+          asset_name="AJ-Tools-${GITHUB_REF_NAME}.zip"
+          test -f "releases/${asset_name}"
           test -f "releases/SHA256SUMS.txt"
+          grep -F "  ${asset_name}" "releases/SHA256SUMS.txt" >/dev/null
+          (
+            cd releases
+            sha256sum -c SHA256SUMS.txt
+          )
 
       - name: Create or update GitHub release
         uses: softprops/action-gh-release@v2

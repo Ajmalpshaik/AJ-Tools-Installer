@@ -8,6 +8,10 @@ $ErrorActionPreference = "Stop"
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $publicRepoRoot = Split-Path -Parent $scriptDir
 
+if (-not [string]::IsNullOrWhiteSpace($Version) -and $Version -notmatch '^\d+\.\d+\.\d+$') {
+    throw "Version must use X.Y.Z format when provided."
+}
+
 $resolvedSourcePath = (Resolve-Path -LiteralPath $SourceRepoPath).Path
 $sourceReleaseDir = Join-Path $resolvedSourcePath "dist\release"
 if (-not (Test-Path -LiteralPath $sourceReleaseDir)) {
@@ -33,6 +37,8 @@ if ([string]::IsNullOrWhiteSpace($Version)) {
 
 $releasesDir = Join-Path $publicRepoRoot "releases"
 New-Item -ItemType Directory -Path $releasesDir -Force | Out-Null
+Get-ChildItem -LiteralPath $releasesDir -File -Filter "AJ-Tools-v*.zip" -ErrorAction SilentlyContinue |
+    Remove-Item -Force
 
 $zipTargetPath = Join-Path $releasesDir $zipName
 Copy-Item -LiteralPath $zipSourcePath -Destination $zipTargetPath -Force
@@ -55,7 +61,7 @@ Write-Host "  - $checksumPath"
 Write-Host ""
 Write-Host "Next steps:"
 Write-Host "1) git add releases/$zipName releases/SHA256SUMS.txt"
-Write-Host "2) git commit -m `"release: $tag`""
+Write-Host "2) git commit -m \"release: $tag\""
 Write-Host "3) git tag $tag"
 Write-Host "4) git push origin main --tags"
 Write-Host "5) GitHub Actions will create/update release for tag $tag and upload:"

@@ -1,4 +1,18 @@
-Thumbs.db
-.DS_Store
+# Editor and IDE files
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Local temp files
 *.tmp
 *.log
+*.cache
+*.bak
+*.orig
+
+# OS files
+Thumbs.db
+.DS_Store

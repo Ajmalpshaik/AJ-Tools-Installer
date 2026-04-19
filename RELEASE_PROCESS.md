@@ -1,36 +1,48 @@
 # Release Process
 
-## One-Time Setup
+`AJ-Tools-Installer` is the public distribution repository only.
 
-1. Create a public GitHub repo named `AJ-Tools-Installer`.
-2. In this local folder, connect remote:
+## Repository Rules
 
-```powershell
-git remote add origin https://github.com/Ajmalpshaik/AJ-Tools-Installer.git
-git branch -M master
-git add .
-git commit -m "chore: initial public installer repo"
-git push -u origin master
-```
+- Do not add source code to this repository.
+- Keep the repository focused on the installer zip, checksum, docs, and release automation.
+- Every installer tag must match the installer zip version.
+- Repository maintenance work alone should not create a new product version number.
 
-## For Each New Version
+## Publish a New Installer Release
 
-1. Build package in private source repo:
+1. Build the installer package in the source repository:
 
 ```powershell
+Set-Location ..\AJ Tools
 powershell -ExecutionPolicy Bypass -File .\dist\package.ps1 -Configuration Release
 ```
 
-2. In this public repo:
+2. Prepare the public release files in this repository:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\tools\prepare-release.ps1 -SourceRepoPath "..\AJ Tools"
-git add releases
+Set-Location ..\AJ-Tools-Installer
+powershell -ExecutionPolicy Bypass -File .\tools\prepare-release.ps1 -SourceRepoPath "..\AJ Tools" -Version X.Y.Z
+```
+
+3. Review the generated files:
+
+- `releases\AJ-Tools-vX.Y.Z.zip`
+- `releases\SHA256SUMS.txt`
+
+4. Commit and tag the installer release:
+
+```powershell
+git add releases CHANGELOG.md README.md INSTALL.md RELEASE_PROCESS.md SECURITY.md .github tools
 git commit -m "release: vX.Y.Z"
 git tag vX.Y.Z
 git push origin main --tags
 ```
 
-3. GitHub Actions workflow automatically creates/updates the Release when tag `vX.Y.Z` is pushed and uploads:
-- `releases/AJ-Tools-vX.Y.Z.zip`
-- `releases/SHA256SUMS.txt`
+5. GitHub Actions publishes the release and uploads the installer zip plus checksum file.
+
+## Important Notes
+
+- Keep only installer-facing documentation in this repository.
+- Public users should always download from the GitHub Releases page, not from ad-hoc file sharing.
+- The source repository is responsible for code versioning and package generation.
