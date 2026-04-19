@@ -2,6 +2,11 @@
 
 This changelog tracks public installer-repository releases.
 
+## [1.3.4] - 2026-04-19
+
+- Published `AJ-Tools-v1.3.4.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+
 ## [1.2.2] - 2026-04-19
 
 - Updated installer repository release automation.
