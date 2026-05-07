@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.4.1] - 2026-05-07
+
+- Published `AJ-Tools-v1.4.1.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package combines Apply Graphics into one shared element/category tool and fixes cut-link behavior.
+- Compatibility remains Revit 2020 and .NET Framework 4.7.2.
+
 ## [1.4.0] - 2026-05-07
 
 - Published `AJ-Tools-v1.4.0.zip`.
