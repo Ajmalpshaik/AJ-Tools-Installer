@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.4.4] - 2026-05-09
+
+- Published `AJ-Tools-v1.4.4.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package updates Apply Graphics with the dark settings manager, split element/category apply actions, last-used settings memory, and active-view graphics validation.
+- Compatibility remains Revit 2020 and .NET Framework 4.7.2.
+
 ## [1.4.3] - 2026-05-07
 
 - Published `AJ-Tools-v1.4.3.zip`.
