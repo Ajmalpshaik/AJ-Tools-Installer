@@ -1,56 +1,81 @@
 # AJ Tools Installer
 
-AJ-Tools-Installer is the public download and release repository for AJ Tools for Autodesk Revit 2020.
+[![Latest Release](https://img.shields.io/github/v/release/Ajmalpshaik/AJ-Tools-Installer?display_name=tag)](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 
-It exists to publish installer packages, checksums, release automation, and end-user install support. It does not contain source code; development happens in [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools).
+Public installer repository for the AJ Tools add-in for Autodesk Revit 2020 and later.
 
-## Repository Role
+This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- GitHub Releases for installer downloads
-- `releases/AJ-Tools-vX.Y.Z.zip`
-- `releases/SHA256SUMS.txt`
-- install, uninstall, and checksum guidance
-- release automation for tagged installer publishes
+- Current installer version: Check [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
+- Maintainer: `Ajmal P.S.`
 
-## Requirements
+## About AJ Tools
 
-- Autodesk Revit 2020
-- Windows x64
-- Administrator rights are required only for all-users installation
+AJ Tools provides automation and utility commands for Autodesk Revit, including:
 
-## Download and Install
+- graphics cleanup and overrides
+- linked model lookup and workset utilities
+- dimension and datum workflows
+- annotation and tagging helpers
+- MEP coordination and duct utilities
+- family parameter cleanup and conversion
+- standards and data management tools
 
-1. Open the [Releases page](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases).
-2. Download `AJ-Tools-vX.Y.Z.zip`.
-3. Extract the archive.
-4. Run `install.cmd` for current-user installation.
-5. Run `install-all-users.cmd` only if you need an all-users install and have Administrator rights.
-6. Start Revit 2020 and confirm the **AJ Tools** tab is available.
+## Supported Revit Versions
 
-## Verify Checksum
+Developed for `Revit 2020` and validated through `Revit 2027`.
 
-Use PowerShell to verify the downloaded package:
+## Installation
 
-```powershell
-Get-FileHash -Algorithm SHA256 .\AJ-Tools-vX.Y.Z.zip
-```
+### Option 1: Download the Latest Release
 
-Compare the output with the matching entry in `SHA256SUMS.txt`.
+1. Open the [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases) page.
+2. Download the latest `AJ-Tools-vX.Y.Z.zip` package.
+3. Extract the ZIP to a stable local folder.
+4. Run the installation script appropriate for your setup:
+   - `install.cmd` - install for current user
+   - `install-all-users.cmd` - install for all users (requires Administrator)
+5. Restart Revit if it is currently running.
+6. Verify that the AJ Tools commands are available in Revit.
 
-## Related Repository
+### Manual Installation
 
-- Source code and development work: [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools)
+1. Extract the release package to a local folder.
+2. Copy the `AJ Tools` folder to your Revit Add-Ins folder:
+   - Current user: `%APPDATA%\Autodesk\Revit\Addins\2020` (or your Revit version)
+   - All users: `C:\Program Files\Autodesk\Revit 2020\AddIns` (or your Revit version)
+3. Restart Revit.
+4. Enable the add-in if prompted by Revit's security dialog.
 
-## Repository Docs
+## Update
 
-- [INSTALL.md](INSTALL.md)
-- [RELEASE_PROCESS.md](RELEASE_PROCESS.md)
-- [SUPPORT.md](SUPPORT.md)
-- [CHANGELOG.md](CHANGELOG.md)
-- [SECURITY.md](SECURITY.md)
+1. Download the latest release package.
+2. Replace the previous add-in files with the new version.
+3. Restart Revit.
+4. Test the add-in in a test model before using on live project work.
+
+## Uninstallation
+
+Run the uninstall script appropriate for your installation:
+
+- `uninstall.cmd` - uninstall for current user
+- `uninstall-all-users.cmd` - uninstall for all users (requires Administrator)
+
+Or manually delete the AJ Tools add-in folder from your Revit Add-Ins folder.
 
 ## Support
 
-- Use this repository for downloads, checksums, installation, uninstall, and release-package issues
-- Use [AJ Tools](https://github.com/Ajmalpshaik/AJ-Tools/issues) for feature requests and source-code defects
-- Support routing and reporting rules: [SUPPORT.md](SUPPORT.md)
+If you encounter issues with installation or the add-in behavior:
+
+1. Check the [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases) page for the latest version.
+2. Open a GitHub issue with:
+   - Revit version
+   - Windows version
+   - AJ Tools version
+   - A short description of the issue
+   - Steps to reproduce if applicable
+3. For security-sensitive issues, email `ajmalnattika@gmail.com` privately.
+
+## GitHub Project Files
+
+This repository includes standard GitHub community files for issues, pull requests, contribution guidance, security reporting, and repository conduct so public maintenance can stay structured and responsive.
