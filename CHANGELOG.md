@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.4.5] - 2026-05-10
+
+- Published `AJ-Tools-v1.4.5.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package reduces the Apply Graphics window size, keeps the settings area scrollable, and restores native close/resize behavior.
+- Compatibility remains Revit 2020 and .NET Framework 4.7.2.
+
 ## [1.4.4] - 2026-05-09
 
 - Published `AJ-Tools-v1.4.4.zip`.
