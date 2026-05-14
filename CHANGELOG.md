@@ -4,6 +4,14 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.4.7] - 2026-05-14
+
+- Published `AJ-Tools-v1.4.7.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package adds the separate `AJ Annotation` ribbon tab with duct reference dimension tools.
+- Release package includes purge view cleanup updates, reset graphics refinements, startup logging cleanup, and build-target cleanup.
+- Compatibility target remains Revit 2020 and .NET Framework 4.7.2. Later Revit versions need Revit-side validation before use on live projects.
+
 ## [1.4.6] - 2026-05-10
 
 - Published `AJ-Tools-v1.4.6.zip`.

@@ -2,11 +2,12 @@
 
 [![Latest Release](https://img.shields.io/github/v/release/Ajmalpshaik/AJ-Tools-Installer?display_name=tag)](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 
-Public installer repository for the AJ Tools add-in for Autodesk Revit 2020 and later.
+Public installer repository for the AJ Tools add-in for Autodesk Revit 2020.
 
 This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- Current installer version: Check [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
+- Current installer version: `v1.4.7`
+- Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 
 ## About AJ Tools
@@ -17,13 +18,14 @@ AJ Tools provides automation and utility commands for Autodesk Revit, including:
 - linked model lookup and workset utilities
 - dimension and datum workflows
 - annotation and tagging helpers
+- AJ Annotation duct reference dimension tools
 - MEP coordination and duct utilities
 - family parameter cleanup and conversion
 - standards and data management tools
 
 ## Supported Revit Versions
 
-Developed for `Revit 2020` and validated through `Revit 2027`.
+Built against the `Revit 2020` API. Later Revit versions must be validated in Revit before use on live projects.
 
 ## Installation
 
@@ -36,14 +38,15 @@ Developed for `Revit 2020` and validated through `Revit 2027`.
    - `install.cmd` - install for current user
    - `install-all-users.cmd` - install for all users (requires Administrator)
 5. Restart Revit if it is currently running.
-6. Verify that the AJ Tools commands are available in Revit.
+6. Verify that the `AJ Tools` tab is available in Revit.
+7. If you use duct reference dimensions, verify that the `AJ Annotation` tab is also available.
 
 ### Manual Installation
 
 1. Extract the release package to a local folder.
 2. Copy the `AJ Tools` folder to your Revit Add-Ins folder:
    - Current user: `%APPDATA%\Autodesk\Revit\Addins\2020` (or your Revit version)
-   - All users: `C:\Program Files\Autodesk\Revit 2020\AddIns` (or your Revit version)
+   - All users: `%PROGRAMDATA%\Autodesk\Revit\Addins\2020` (or your Revit version)
 3. Restart Revit.
 4. Enable the add-in if prompted by Revit's security dialog.
 
