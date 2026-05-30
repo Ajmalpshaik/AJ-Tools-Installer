@@ -4,6 +4,14 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.5.0] - 2026-05-30
+
+- Published `AJ-Tools-v1.5.0.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package adds Search and Sort functionality for Categories and Parameters in the Filter Pro tool.
+- Release package modernizes ListBox and ListBoxItem styling in the shared UI components.
+- Compatibility target remains Revit 2020 and .NET Framework 4.7.2. Later Revit versions need Revit-side validation before use on live projects.
+
 ## [1.4.9] - 2026-05-25
 
 - Published `AJ-Tools-v1.4.9.zip`.
