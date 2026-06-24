@@ -3,6 +3,14 @@
 This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
+## [1.5.1] - 2026-06-24
+
+- Published `AJ-Tools-v1.5.1.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package integrates the AJ AI (Gemini Shell) tool into the main AJ Tools ribbon under a new "AI Assistant" panel, fixing visibility issues caused by an empty standalone tab.
+- Release package fixes MSBuild compilation errors related to legacy PackageReference restores in the zero-warnings 2020 project configuration.
+- Compatibility target remains Revit 2020 and .NET Framework 4.7.2.
+
 
 ## [1.5.0] - 2026-05-30
 
