@@ -1,12 +1,22 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+artifacts/
+TestResults/
+
 # Editor and IDE files
 .vs/
 .vscode/
+.idea/
 *.suo
 *.user
+*.userprefs
 *.userosscache
 *.sln.docstates
 
 # Local temp files
+__pycache__/
+.pytest_cache/
 *.tmp
 *.log
 *.cache
@@ -15,4 +25,5 @@
 
 # OS files
 Thumbs.db
+desktop.ini
 .DS_Store
