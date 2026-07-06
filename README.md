@@ -6,7 +6,7 @@ Public installer repository for the AJ Tools add-in for Autodesk Revit.
 
 This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- Current installer version: `v1.10.0`
+- Current installer version: `v1.10.1`
 - Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 
@@ -25,9 +25,9 @@ AJ Tools provides automation and utility commands for Autodesk Revit, including:
 
 ## Supported Revit Versions
 
-The current package is a .NET Framework build against the Revit 2020 API and installs for Revit 2020, 2021, 2022, 2023, and 2024.
+The current package is a .NET Framework build against the Revit 2020 API. The installer stages AJ Tools for Revit 2020, 2021, 2022, 2023, 2024, 2025, 2026, and 2027.
 
-The installer contains explicit Revit 2025-2027 handling, but skips those versions with a `NEEDS_REVIEW` message until a separate modern .NET build is verified.
+Revit 2025-2027 are installed as requested, but they remain `NEEDS_REVIEW` until the separate modern .NET/Revit API build is completed.
 
 ## Installation
 
@@ -40,7 +40,7 @@ The installer contains explicit Revit 2025-2027 handling, but skips those versio
    - `install.cmd` - install for current user
    - `install-all-users.cmd` - install for all users (requires Administrator)
 5. Restart Revit if it is currently running.
-6. Open Revit 2020-2024 and verify that the `AJ Tools` tab is available.
+6. Open Revit 2020-2027 and verify that the `AJ Tools` tab is available.
 7. If you use duct reference dimensions, verify that the `AJ Annotation` tab is also available.
 
 ### Option 2: Download This Repository
@@ -48,7 +48,7 @@ The installer contains explicit Revit 2025-2027 handling, but skips those versio
 1. Click `Code`, then `Download ZIP` on this repository.
 2. Extract the repository ZIP.
 3. Open the `releases` folder.
-4. Extract `AJ-Tools-v1.10.0.zip`.
+4. Extract `AJ-Tools-v1.10.1.zip`.
 5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ### Manual Installation

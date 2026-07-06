@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.10.1] - 2026-07-06
+
+- Published `AJ-Tools-v1.10.1.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Updated the installer to stage AJ Tools folders and `.addin` manifests for Revit 2020-2027.
+- Revit 2025-2027 now receive installer entries, while still reporting `NEEDS_REVIEW` until the separate modern .NET/Revit API build is completed.
+
 ## [1.10.0] - 2026-07-06
 
 - Published `AJ-Tools-v1.10.0.zip`.
