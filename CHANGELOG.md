@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.11.3] - 2026-07-07
+
+- Published `AJ-Tools-v1.11.3.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Fixed Revit startup dependency resolution so bundled DLLs such as `CommunityToolkit.Mvvm.dll` load from the AJ Tools install folder.
+- Fixed modern Revit packaging so Revit 2025-2027 payloads include copied NuGet dependency DLLs and `.deps.json` companion files.
+
 ## [1.11.2] - 2026-07-06
 
 - Published `AJ-Tools-v1.11.2.zip`.
