@@ -6,7 +6,7 @@ Public installer repository for the AJ Tools add-in for Autodesk Revit.
 
 This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- Current installer version: `v1.11.0`
+- Current installer version: `v1.11.1`
 - Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 
@@ -27,9 +27,10 @@ AJ Tools provides automation and utility commands for Autodesk Revit, including:
 
 The current package includes versioned AJ Tools payloads for Autodesk Revit 2020 through 2027:
 
-- Revit 2020-2024: .NET Framework payload
-- Revit 2025-2026: .NET 8 payloads
-- Revit 2027: .NET 10 payload
+- Revit 2020: .NET Framework 4.7.2 payload built against the Revit 2020 API
+- Revit 2021-2024: .NET Framework 4.8 payloads built against matching Revit API versions
+- Revit 2025-2026: .NET 8 payloads built against matching Revit API versions
+- Revit 2027: .NET 10 payload built against the Revit 2027 API
 
 ## Installation
 
@@ -50,7 +51,7 @@ The current package includes versioned AJ Tools payloads for Autodesk Revit 2020
 1. Click `Code`, then `Download ZIP` on this repository.
 2. Extract the repository ZIP.
 3. Open the `releases` folder.
-4. Extract `AJ-Tools-v1.11.0.zip`.
+4. Extract `AJ-Tools-v1.11.1.zip`.
 5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ### Manual Installation
