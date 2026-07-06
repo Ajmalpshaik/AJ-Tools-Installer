@@ -15,14 +15,14 @@
 5. Start Revit 2020-2027 and confirm the **AJ Tools** tab is visible.
 6. Confirm the **AJ Annotation** tab is visible if you need the duct reference dimension tools.
 
-The current package is a .NET Framework build. Revit 2025-2027 are installed as requested, but the installer prints a `NEEDS_REVIEW` message until a separate modern .NET/Revit API build is available.
+The current package includes versioned AJ Tools payloads for Revit 2020-2027: .NET Framework for Revit 2020-2024, .NET 8 for Revit 2025-2026, and .NET 10 for Revit 2027.
 
 ## Install From Repository Download
 
 1. Download this repository as a ZIP from GitHub.
 2. Extract the repository ZIP.
 3. Open the `releases` folder.
-4. Extract `AJ-Tools-v1.10.1.zip`.
+4. Extract `AJ-Tools-v1.11.0.zip`.
 5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ## Update an Existing Install
