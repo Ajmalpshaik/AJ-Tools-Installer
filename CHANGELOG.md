@@ -3,6 +3,15 @@
 This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
+
+## [1.10.0] - 2026-07-06
+
+- Published `AJ-Tools-v1.10.0.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Release package adds the MEP Openings workflow and the Colorize view-override workflow.
+- Release package includes the intervening AJ Tools audit releases from v1.6.0 through v1.9.1, including Pipe Sizing, AJ AI hardening, metadata cleanup, and UI refinements.
+- The installer now documents Revit 2020-2024 as the supported .NET Framework install range and skips Revit 2025-2027 until a separate modern .NET build is verified.
+
 ## [1.5.1] - 2026-06-24
 
 - Published `AJ-Tools-v1.5.1.zip`.

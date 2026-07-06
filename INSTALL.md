@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- Autodesk Revit 2020
+- Autodesk Revit 2020, 2021, 2022, 2023, or 2024
 - Windows x64
 - Administrator rights only for all-users installation
 
@@ -12,8 +12,18 @@
 2. Extract the zip to a normal local folder.
 3. Run `install.cmd` for a current-user install.
 4. Run `install-all-users.cmd` only if you need the add-in for every Windows user on the machine.
-5. Start Revit 2020 and confirm the **AJ Tools** tab is visible.
+5. Start Revit 2020-2024 and confirm the **AJ Tools** tab is visible.
 6. Confirm the **AJ Annotation** tab is visible if you need the duct reference dimension tools.
+
+The current package is a .NET Framework build. Revit 2025-2027 entries are present in the installer script, but those versions are skipped with a `NEEDS_REVIEW` message until a separate modern .NET build is available.
+
+## Install From Repository Download
+
+1. Download this repository as a ZIP from GitHub.
+2. Extract the repository ZIP.
+3. Open the `releases` folder.
+4. Extract `AJ-Tools-v1.10.0.zip`.
+5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ## Update an Existing Install
 
@@ -39,7 +49,7 @@ Match the hash with `SHA256SUMS.txt` before installing.
 
 ## Troubleshooting
 
-- If the AJ Tools tab does not appear, confirm you are using Autodesk Revit 2020.
+- If the AJ Tools tab does not appear, confirm you are using Autodesk Revit 2020-2024.
 - If the AJ Annotation tab does not appear, confirm version `v1.4.7` or later is installed.
 - If Windows blocks downloaded files, unblock the extracted package files before launching Revit:
 
