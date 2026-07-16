@@ -4,6 +4,13 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.13.5] - 2026-07-16
+
+- Published `AJ-Tools-v1.13.5.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Catch-up release covering everything since v1.11.3: the AJ AI shell can now run live against Revit via a local bridge, the 2020-2027 multi-version build is fully wired end to end, several version-safe API fixes, Ceiling Magnet reads real grid lines on Revit 2025.3+, and the new Arrange Text in Box tool.
+- Fixed the release package itself: the previous packaging script had regressed to bundling only the Revit 2020 build; it now builds and bundles all 8 per-year payloads (2020-2027) again, matching what this page has always claimed.
+
 ## [1.11.3] - 2026-07-07
 
 - Published `AJ-Tools-v1.11.3.zip`.

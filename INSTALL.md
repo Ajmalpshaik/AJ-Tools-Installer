@@ -22,7 +22,7 @@ The current package includes API-specific AJ Tools payloads for Revit 2020-2027:
 1. Download this repository as a ZIP from GitHub.
 2. Extract the repository ZIP.
 3. Open the `releases` folder.
-4. Extract `AJ-Tools-v1.11.3.zip`.
+4. Extract `AJ-Tools-v1.13.5.zip`.
 5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ## Update an Existing Install
