@@ -10,6 +10,8 @@ This repository is intended for distribution, installation, and day-to-day use. 
 - Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 
+If AJ Tools has been useful in your Revit workflow, consider starring this repository - it helps other Revit users discover it.
+
 ## About AJ Tools
 
 AJ Tools provides automation and utility commands for Autodesk Revit, including:
