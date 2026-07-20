@@ -6,7 +6,7 @@ Public installer repository for the AJ Tools add-in for Autodesk Revit.
 
 This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- Current installer version: `v1.13.5`
+- Current installer version: `v1.23.1`
 - Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 

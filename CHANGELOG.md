@@ -4,6 +4,16 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.23.1] - 2026-07-21
+
+- Published `AJ-Tools-v1.23.1.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Catch-up release covering everything since v1.13.5: two new tools (Smart Selection, Highlight
+  Selection), a Ceiling Magnet rework that keeps both selection workflows side by side, an About
+  window overhaul, and an AJ AI branding/UX pass (Settings popup, restyled pane, incremental-edit
+  code generation, crash-safe autosave/recovery, MCP bridge renamed to "AJ AI Bridge"). Full detail
+  in the source repository's `CHANGELOG.md`.
+
 ## [1.13.5] - 2026-07-16
 
 - Published `AJ-Tools-v1.13.5.zip`.
