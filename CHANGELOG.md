@@ -4,6 +4,18 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.25.0] - 2026-07-25
+
+- Published `AJ-Tools-v1.25.0.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Catch-up release covering everything since v1.23.1: the C# pane gains a Live Console with
+  persistent cross-session history, one-click Snoop Selection, Ctrl+Space Revit API completion,
+  and script pinning with a "Run Pinned" ribbon button (v1.24.0); HVAC Schematic drawing-logic
+  fixes - connections, level bands, equipment rows, domain filter (v1.24.1); Claude (Anthropic)
+  as a third AI provider alongside Gemini and OpenAI, masked API key fields in the Settings
+  window, and a standalone "Saved Scripts" ribbon button (v1.25.0). Full detail in the source
+  repository's `CHANGELOG.md`.
+
 ## [1.23.1] - 2026-07-21
 
 - Published `AJ-Tools-v1.23.1.zip`.
