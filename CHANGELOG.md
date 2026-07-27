@@ -4,6 +4,19 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.25.5] - 2026-07-28
+
+- Published `AJ-Tools-v1.25.5.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Catch-up release covering everything since v1.25.0: Highlight Selection insulation/lining
+  completion and the ProgramData all-users deploy path fix (v1.25.1); Arrange Tags Settings
+  rebuilt as a themed WPF window with live validation, presets, and a locale decimal-parsing fix
+  (v1.25.2); the "Created & All Rights Reserved @ Ajmal P.S." credit line in every window
+  (v1.25.3); Reassign Reference Level's picker rebuilt as themed WPF with a Swap button and
+  inline same-level validation (v1.25.4); Smart MEP Tagging Settings rebuilt as themed WPF -
+  the last WinForms dialog in the suite is gone (v1.25.5). Full detail in the source
+  repository's `CHANGELOG.md`.
+
 ## [1.25.0] - 2026-07-25
 
 - Published `AJ-Tools-v1.25.0.zip`.
