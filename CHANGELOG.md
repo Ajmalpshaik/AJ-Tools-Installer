@@ -4,6 +4,18 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.25.6] - 2026-07-28
+
+- Published `AJ-Tools-v1.25.6.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Full-project UI audit, no new tool: 12 windows that could open behind the Revit window are now
+  owned by it (Duct Standards, Filter Pro, Linked ID Viewer, Linked Search, Pipe Sizing, both Purge
+  tools, Revision Cloud Settings, Transfer View Templates, Apply Graphics, Shared Param to Family
+  Param, Saved Scripts); 5 borderless windows (Graphics Override, all 4 View Crop windows) can no
+  longer maximize over the Windows taskbar; Esc now closes MEP Opening Settings, Pipe Sizing, and
+  About; removed a leftover "Report saved successfully." popup from the Pipe Sizing CSV export. Full
+  detail in the source repository's `CHANGELOG.md`.
+
 ## [1.25.5] - 2026-07-28
 
 - Published `AJ-Tools-v1.25.5.zip`.
