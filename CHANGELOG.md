@@ -4,6 +4,27 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.39.1] - 2026-08-04
+
+- Published `AJ-Tools-v1.39.1.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Large catch-up release: this is the first public build to carry everything from 1.26.0 onward,
+  which had been running locally but never published. Headline additions are **Game Mode** (a
+  first-person walkthrough inside a real Revit perspective view, with collision based on what is
+  actually visible, five tool-weapons, teleport, saved positions, photo mode, remappable keys and a
+  snag punch-list report), **Create Tags** and **Stack Tags** on the AJ Annotation Tags panel, and
+  **nine new Transfer and Purge tools** (Transfer Schedules / Legends / Drafting Views, Purge Unused
+  View Templates / Filters / Groups, plus three more Purge Unplaced kinds). Reassign Reference Level
+  also gained a Selected Elements scope.
+- Build quality: the Revit 2025, 2026 and 2027 builds now compile with zero warnings, matching the
+  2020 baseline; the AJ AI Bridge moved off an obsolete crypto call for its session token with no
+  change to token strength or format.
+- Packaging fix: `SHA256SUMS.txt` is now written with Unix line endings. It had regressed to Windows
+  endings, which the publish workflow's `sha256sum -c` check on Linux rejects even when the hash is
+  correct. A `.gitattributes` rule now pins it.
+- Payloads for Revit 2020 through 2027, all stamped 1.39.1.0. Full detail in the source repository's
+  `CHANGELOG.md`.
+
 ## [1.25.6] - 2026-07-28
 
 - Published `AJ-Tools-v1.25.6.zip`.

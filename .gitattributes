@@ -1,0 +1,5 @@
+# Checksum manifests are validated by sha256sum on Linux CI - must stay LF.
+SHA256SUMS.txt text eol=lf
+
+# Shell scripts run on Linux runners.
+*.sh text eol=lf

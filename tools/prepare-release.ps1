@@ -46,7 +46,11 @@ Copy-Item -LiteralPath $zipSourcePath -Destination $zipTargetPath -Force
 $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $zipTargetPath).Hash.ToLower()
 $checksumLine = "$hash  $zipName"
 $checksumPath = Join-Path $releasesDir "SHA256SUMS.txt"
-Set-Content -LiteralPath $checksumPath -Encoding ascii -Value $checksumLine
+# Must end with a bare LF, not CRLF. The publish workflow validates this file with
+# `sha256sum -c` on Ubuntu, where a trailing CR becomes part of the filename and the
+# check fails with "No such file or directory" even though the hash itself is correct.
+# Set-Content would write CRLF on Windows PowerShell, so write the bytes explicitly.
+[System.IO.File]::WriteAllText($checksumPath, "$checksumLine`n", [System.Text.Encoding]::ASCII)
 
 if ($zipName -match '^AJ-Tools-v(?<version>\d+\.\d+\.\d+)\.zip$') {
     $tag = "v$($Matches.version)"
