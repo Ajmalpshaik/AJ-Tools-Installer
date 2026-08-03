@@ -58,6 +58,26 @@ if ($zipName -match '^AJ-Tools-v(?<version>\d+\.\d+\.\d+)\.zip$') {
     $tag = "vX.Y.Z"
 }
 
+# Stamp the version into the user-facing docs. These had drifted badly by 2026-08-04 -
+# README.md still told people to extract AJ-Tools-v1.13.5.zip and INSTALL.md named
+# v1.25.0, neither of which is in the repo, so anyone following the steps hit a file
+# that does not exist. Doing it here means the docs cannot fall behind the package again.
+# Only concrete version numbers are rewritten: the literal "AJ-Tools-vX.Y.Z.zip"
+# placeholder used in the generic instructions is deliberately left alone.
+$docTargets = @("README.md", "INSTALL.md")
+foreach ($docName in $docTargets) {
+    $docPath = Join-Path $publicRepoRoot $docName
+    if (-not (Test-Path -LiteralPath $docPath)) { continue }
+    $original = [System.IO.File]::ReadAllText($docPath)
+    $updated = $original
+    $updated = [regex]::Replace($updated, 'AJ-Tools-v\d+\.\d+\.\d+\.zip', "AJ-Tools-v$Version.zip")
+    $updated = [regex]::Replace($updated, '(Current installer version:\s*`?v)\d+\.\d+\.\d+(`?)', "`${1}$Version`${2}")
+    if ($updated -ne $original) {
+        [System.IO.File]::WriteAllText($docPath, $updated, (New-Object System.Text.UTF8Encoding $false))
+        Write-Host "Updated version references in $docName"
+    }
+}
+
 Write-Host ""
 Write-Host "Prepared release files:"
 Write-Host "  - $zipTargetPath"

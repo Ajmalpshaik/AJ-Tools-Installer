@@ -6,7 +6,7 @@ Public installer repository for the AJ Tools add-in for Autodesk Revit.
 
 This repository is intended for distribution, installation, and day-to-day use. Source code development, internal testing, and build processes are maintained separately in the private [AJ-Tools](https://github.com/Ajmalpshaik/AJ-Tools) repository.
 
-- Current installer version: `v1.25.0`
+- Current installer version: `v1.39.1`
 - Latest download: [Releases](https://github.com/Ajmalpshaik/AJ-Tools-Installer/releases)
 - Maintainer: `Ajmal P.S.`
 
@@ -16,14 +16,18 @@ If AJ Tools has been useful in your Revit workflow, consider starring this repos
 
 AJ Tools provides automation and utility commands for Autodesk Revit, including:
 
-- graphics cleanup, colorizing, and overrides
+- graphics cleanup, colorizing, overrides, and selection highlighting
 - linked model lookup and workset utilities
 - dimension and datum workflows
-- annotation and tagging helpers
+- annotation and tagging helpers - smart MEP tagging, tag creation, tag stacking, and rearranging
 - AJ Annotation duct reference dimension tools
 - MEP coordination, opening coordination, and duct utilities
+- transfer of view templates, schedules, legends, and drafting views between open projects
+- purge tools for unplaced views and unused view templates, filters, and group types
 - family parameter cleanup and conversion
 - standards and data management tools
+- a built-in AI assistant that turns a plain-English request into a reviewed C# script
+- Game Mode: a first-person walkthrough of the model for review, snagging, and selection
 
 ## Supported Revit Versions
 
@@ -53,7 +57,7 @@ The current package includes versioned AJ Tools payloads for Autodesk Revit 2020
 1. Click `Code`, then `Download ZIP` on this repository.
 2. Extract the repository ZIP.
 3. Open the `releases` folder.
-4. Extract `AJ-Tools-v1.13.5.zip`.
+4. Extract `AJ-Tools-v1.39.1.zip`.
 5. Run `install.cmd` or `install-all-users.cmd` from the extracted package folder.
 
 ### Manual Installation
