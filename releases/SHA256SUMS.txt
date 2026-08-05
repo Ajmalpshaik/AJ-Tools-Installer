@@ -1,1 +1,1 @@
-c7c320bed6eeee6360d55c24cfcbaff8ae1b25f64ec162b47bc03c02434209fc  AJ-Tools-v1.40.6.zip
+2dbac217d744bc3892f635419a783e51e5c3cc77bd8cfeccc5493388a9c866cd  AJ-Tools-v1.41.0.zip

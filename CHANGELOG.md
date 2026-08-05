@@ -4,6 +4,23 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.41.0] - 2026-08-06
+
+- Published `AJ-Tools-v1.41.0.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- **Added**: **NVIDIA is now a fourth AI option in the C# panel**, alongside Gemini, OpenAI and Claude.
+  NVIDIA's site (build.nvidia.com) gives away around 130 AI models on a free tier, so this is a no-cost
+  way to use the C# panel. Open **Settings** in the panel, choose **NVIDIA**, and paste the key from that
+  site (it starts with `nvapi-`). Four good models are listed to pick from, and there is a box to paste
+  any other model name copied off the NVIDIA site, so a new model can be tried without waiting for an
+  update. It starts on **GLM-5.2**, the strongest of them for writing Revit code.
+- **Note**: Replies from GLM-5.2 feel slower than Claude, and that is normal rather than a fault - it is
+  a "thinking" model that works the problem through before answering. It is given three minutes instead
+  of one, and a much larger answer allowance so a long script is not cut off half way.
+- **Note**: Nothing else changed. The panel still starts on Gemini, and Gemini/OpenAI/Claude behave
+  exactly as before - nothing switches over until NVIDIA is picked. As always, whichever AI provider is
+  selected, your question and the model details the panel reads are sent to that provider's servers.
+
 ## [1.40.6] - 2026-08-05
 
 - Published `AJ-Tools-v1.40.6.zip`.
