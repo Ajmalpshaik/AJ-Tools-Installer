@@ -4,6 +4,33 @@ This changelog tracks public installer-repository releases.
 Standard release tags are `vX.Y.Z` and should match the shipped AJ Tools version.
 Historical tag `v1.2.2` remains as a repository-maintenance exception; do not create new installer-only version numbers.
 
+## [1.40.6] - 2026-08-05
+
+- Published `AJ-Tools-v1.40.6.zip`.
+- Published the matching `SHA256SUMS.txt` entry for the installer package.
+- Carries everything from 1.39.2 onward, which had been running locally but never published. The bulk
+  of it is a **suite-wide interface pass**: windows now open and close with motion instead of appearing
+  and vanishing, tab switches fade rather than hard-cut, and about 90 tick boxes and radio buttons
+  across 21 windows were redrawn to match AJ Tools instead of showing plain grey Windows squares.
+  Nothing moved on any window - the spacing and sizing are unchanged, only the controls are redrawn,
+  and every window still returns exactly the same answer as before.
+- **Added**: **Purge Unused Elements** and **Purge Unplaced Views** now show a progress bar and a live
+  count while they scan, instead of freezing behind an hourglass. These two were the longest silent
+  waits in the suite - both have to try deleting every candidate and undo it again to find out what
+  Revit will actually release. The scan is not faster; it just no longer looks dead.
+- **Fixed**: **Game Mode - the camera flew off every time you shot something with the SELECTOR gun.**
+  The selector is the only weapon that changes what is selected in Revit, and selecting something makes
+  Revit rearrange its own toolbar area, which makes the drawing window shorter. That moves the middle of
+  the view - the point the game measures your mouse against - while the pointer stays on the old middle,
+  so the game read the gap as a mouse yank and spun the view. The pointer is now put back on the new
+  middle the moment the window changes.
+- **Fixed**: Both Purge windows could be closed with the X or Esc while still scanning, with the scan
+  carrying on underneath. They now refuse to close until the work has finished.
+- **Fixed**: Five controls had lost their keyboard outline, and Linked Search's Models picker was the
+  last control still wearing plain Windows chrome.
+- Payloads for Revit 2020 through 2027, all stamped 1.40.6.0. Full detail in the source repository's
+  `CHANGELOG.md`.
+
 ## [1.39.1] - 2026-08-04
 
 - Published `AJ-Tools-v1.39.1.zip`.
